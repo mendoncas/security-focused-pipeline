@@ -13,6 +13,7 @@ func handleHello(w http.ResponseWriter, r *http.Request) {
 func main() {
 	port := ":9091"
 	http.HandleFunc("/hello", handleHello)
+	fmt.Sprintln("alulelcliaj")
 	if err := http.ListenAndServe(port, nil); err != nil {
 		log.Fatal(err)
 	}
