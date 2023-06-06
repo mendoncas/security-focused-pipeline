@@ -6,14 +6,17 @@ import (
 	"net/http"
 )
 
-func handleHello(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "hello")
+func HelloMessage() string {
+	return "Hello"
+}
+
+func HandleHello(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, HelloMessage())
 }
 
 func main() {
 	port := ":9091"
-	http.HandleFunc("/hello", handleHello)
-	fmt.Sprintln("alulelcliaj")
+	http.HandleFunc("/hello", HandleHello)
 	if err := http.ListenAndServe(port, nil); err != nil {
 		log.Fatal(err)
 	}
