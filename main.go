@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 )
 
 func HelloMessage() string {
@@ -15,8 +16,9 @@ func HandleHello(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	port := ":9091"
+	port := os.Getenv("PORT")
 	http.HandleFunc("/hello", HandleHello)
+	fmt.Println("aplicação ouvindo na porta ", port)
 	if err := http.ListenAndServe(port, nil); err != nil {
 		log.Fatal(err)
 	}

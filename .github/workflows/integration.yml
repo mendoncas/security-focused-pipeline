@@ -1,5 +1,5 @@
 name: Build imagem
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: Pipeline Focada em segurança 🔒
 on: [push]
 jobs:
   ci:
