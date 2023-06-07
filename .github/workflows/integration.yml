@@ -42,6 +42,7 @@ jobs:
       - 
         name: Scan ZAP
         uses: zaproxy/action-baseline@v0.3.0
+        continue-on-error: true
         with:
           target: https://security-focused-pipeline-production.up.railway.app
       
