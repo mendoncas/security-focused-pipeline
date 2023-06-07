@@ -19,7 +19,7 @@ func main() {
 	port := os.Getenv("PORT")
 	http.HandleFunc("/hello", HandleHello)
 	fmt.Println("aplicação ouvindo na porta ", port)
-	if err := http.ListenAndServe(port, nil); err != nil {
+	if err := http.ListenAndServe(":"+port, nil); err != nil {
 		log.Fatal(err)
 	}
 }
