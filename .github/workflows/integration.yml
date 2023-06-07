@@ -39,3 +39,9 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/security-focused-pipeline:latest
+      - 
+        name: Scan ZAP
+        uses: zaproxy/action-baseline@v0.3.0
+        with:
+          target: https://security-focused-pipeline-production.up.railway.app
+      
