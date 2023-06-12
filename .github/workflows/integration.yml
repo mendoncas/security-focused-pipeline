@@ -44,5 +44,7 @@ jobs:
         uses: zaproxy/action-baseline@v0.3.0
         continue-on-error: true
         with:
-          target: https://security-focused-pipeline-production.up.railway.app
+          target: https://humdrum-spoon-production.up.railway.app
+          # target: https://security-focused-pipeline-production.up.railway.app
+
       
